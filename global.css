@@ -1,0 +1,298 @@
+/* === Botão transparente (sem fundo ou borda) === */
+.clear {
+    background: transparent;
+    border: none;
+}
+
+/* === Botão sólido branco com texto preto === */
+.solid {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+}
+
+/* === Botão com borda branca e fundo transparente === */
+.outline {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+/* === Mensagem de erro (invisível por padrão) === */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* === Botões gerais === */
+button {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* === Botões desabilitados (visual e cursor) === */
+button:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+/* === Efeito de clique no botão === */
+button:active {
+    opacity: 0.8;
+}
+
+/* === Tela de carregamento (fundo escuro sobre a tela toda) === */
+.loading {
+    background: rgba(0, 0, 0, 0.5);
+    /* fundo escuro translúcido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    /* fica acima de tudo */
+}
+
+/* === Campos do formulário com espaçamento inferior === */
+.form-field {
+    margin-bottom: 10px;
+}
+
+/* === Estilização comum para inputs e botões === */
+input,
+button {
+    padding: 10px;
+    width: -webkit-fill-available;
+    /* ocupa toda a largura possível */
+}
+
+/* === Largura fixa do formulário === */
+form {
+    width: 300px;
+}
+
+/* === Estilo da label dentro da tela de loading === */
+.loading label {
+    color: #ffffff;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* === Centraliza vertical e horizontalmente o conteúdo === */
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* === Reforço para tela de loading === */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* fundo escuro translúcido */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 1000;
+}
+
+/* === Navbar personalizada laranja === */
+.navbar-laranja {
+    background-color: #ED8604;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* === Cores dos links e título na navbar === */
+.navbar-laranja .navbar-nav .nav-link,
+.navbar-laranja .navbar-brand {
+    color: white;
+}
+
+/* === Ícone hambúrguer branco personalizado === */
+.navbar-laranja .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.garfinho-flutuante {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    /* Define onde a imagem vai ficar na pagina */
+    left: 20px;
+    z-index: 1000;
+}
+
+
+.garfinho-img-flutuante {
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff6600;
+    padding: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Balão de fala escondido por padrão */
+.garfinho-fala {
+    display: none;
+    position: relative;
+    margin-left: 10px;
+    /* coloca a fala à direita da imagem */
+    background-color: #ffffff;
+    color: #333;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+
+/* Triângulo do balão */
+.garfinho-fala::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #ffffff transparent transparent;
+}
+
+
+/* Mostra a fala ao passar o mouse */
+.garfinho-flutuante:hover .garfinho-fala {
+    display: block;
+}
+
+/* Animação de surgimento */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Ajusta os títulos das seções */
+section h2 {
+    margin-top: 10px;
+    /* Pode testar com 10px se quiser mais compacto */
+    margin-bottom: 15px;
+    /* Reduzido para evitar espaço excessivo */
+    font-size: 1.8rem;
+    /* Opcional: ligeiramente menor que o padrão */
+    color: rgb(255, 255, 255);
+}
+
+/* Ajusta espaçamento das sections como um todo */
+section.container-fluid {
+    margin-top: 10px;
+    /* Reduzido (antes estava mt-5 = ~48px) */
+    margin-bottom: 10px;
+}
+
+
+.garfinho-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1000;
+}
+
+
+.garfinho-card {
+    /* deixa os cards flexíveis e maiores */
+    flex: 1 1 300px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #328f8a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+    min-width: 250px;
+
+}
+.garfinho-card:hover {
+    transform: scale(1.05);
+    background-color: #ED8604;
+}
+
+.garfinho-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+#mapa h2 {
+
+    margin-top: 20px;
+    /* ou ajuste como quiser */
+    padding-top: 20px;
+}
+
+/* === Altura e largura da área do mapa === */
+#map {
+
+    height: 200px;
+    width: 100%;
+}
+
+
+h2.text-center.mb-4 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+  

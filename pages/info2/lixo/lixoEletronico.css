@@ -1,0 +1,19 @@
+/* Alinha o texto justificado e ajusta espaçamento */
+.container.mt-5.mb-5 {
+    text-align: justify;
+    padding: 20px;
+    background-color: rgb(64, 141, 153); /* Cor de fundo opcional */
+    border-radius: 8px;
+    box-shadow: 20px 10px 30px rgba(0,0,1,1.1); /* Sombra opcional */
+}
+
+/* Melhora a legibilidade dos parágrafos */
+.container.mt-5.mb-5 p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Centraliza o título */
+.container.mt-5.mb-5 h2 {
+    text-align: center;
+}

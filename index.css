@@ -1,0 +1,86 @@
+/* === Estilos gerais do corpo da página === */
+body {
+    background-color: rgb(64, 141, 153);
+    /* Cor de fundo da página */
+    height: 100vh;
+    /* Altura da viewport */
+    font-family: Arial, sans-serif;
+    /* Fonte principal */
+    color: #ffffff;
+    /* Cor do texto padrão */
+    font-size: 22px;
+    /* Tamanho da fonte */
+    text-align: center;
+    /* Alinhamento centralizado do texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* === Container com largura máxima para conteúdo centralizado === */
+.container {
+    max-width: 960px;
+    /* Limita a largura para melhor legibilidade */
+}
+
+/* === Estilo base dos cards de empresas parceiras === */
+.card-parceira {
+    background-color: rgba(104, 56, 56, 0.1);
+    /* Fundo com leve transparência */
+    border: 1px solid #686b66;
+    /* Borda branca semi-transparente */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    transition: transform 0.2s ease;
+    /* Suaviza animações de escala */
+    cursor: pointer;
+    /* Cursor do mouse vira "mão" */
+    color: white;
+    /* Cor do texto dentro do card */
+}
+
+/* === Efeito ao passar o mouse nos cards === */
+.card-parceira:hover {
+    transform: scale(1.03);
+    /* Aumenta levemente o tamanho */
+    background-color: #ED8604;
+    /* Clareia o fundo */
+}
+
+/* === Imagens dentro dos cards === */
+.card-parceira img {
+    max-height: 60px;
+    /* Altura máxima da imagem */
+    object-fit: contain;
+    /* A imagem mantém proporção sem cortar */
+}
+
+/* === Imagens de topo nos cards (caso use estrutura de card padrão do Bootstrap) === */
+.card-img-top {
+    width: 100%;
+    /* Imagem ocupa toda a largura do card */
+    height: 200px;
+    /* Altura fixa */
+    object-fit: auto;
+    /* Mantém a proporção da imagem sem cortar */
+    border-radius: 0.5rem 0.5rem 0 0;
+    /* Arredondamento apenas no topo da imagem */
+}
+
+/* === Estilos responsivos para telas pequenas (máx. 768px) === */
+@media (max-width: 768px) {
+    .card-parceira img {
+        max-height: 60px;
+        /* Reduz altura da imagem para telas menores */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+        /* Reduz tamanho da marca na navbar */
+    }
+
+    .navbar {
+        padding-top: 0.2rem;
+        /* Reduz o espaço vertical da navbar */
+        padding-bottom: 0.2rem;
+    }
+}

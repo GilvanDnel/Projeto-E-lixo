@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Meio Ambiente</title>
+
+  <!-- Caminhos corrigidos para o novo local -->
+  <link rel="stylesheet" href="../../global.css" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="../../index.css" />
+
+
+</head>
+
+<body>
+  <header class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="../../index.html">Início</a>
+      </li>
+
+    </ul>
+  </header>
+
+
+
+  <div class="form-container">
+    <form>
+      <!-- Email -->
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()" />
+        <div class="error" id="email-required-error">Campo obrigatório</div>
+        <div class="error" id="email-invalid-error">Email inválido</div>
+      </div>
+
+      <!-- Senha -->
+      <div class="form-field">
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Senha" onchange="onChangePassword()" />
+        <div class="error" id="password-required-error">Campo obrigatório</div>
+      </div>
+
+      <!-- Botão -->
+      <div class="form-field">
+        <button type="button" class="solid" id="login-button" disabled onclick="login()">Entrar</button>
+      </div>
+
+      <!-- Recuperação -->
+      <div class="form-field">
+        <button type="button" class="link" onclick="window.location.href='../recover/recover.html'">Esqueceu sua
+          senha?</button>
+      </div>
+
+      <!-- Cadastro -->
+      <div class="form-field">
+        <button type="button" class="link" onclick="window.location.href='../register/register.html'">Criar
+          Conta</button>
+      </div>
+
+      <!-- Link de voltar -->
+      <div class="form-field">
+        <button type="button" class="link" onclick="window.location.href='../../index.html'">Inicio</button>
+      </div>
+
+  </div>
+
+  <!-- Firebase e scripts -->
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth-compat.js"></script>
+
+  <script src="../../firebase-init.js"></script>
+  <script src="../../validation.js"></script>
+  <script src="../../loading.js"></script>
+  <script src="login.js"></script>
+
+</body>
+
+</html>

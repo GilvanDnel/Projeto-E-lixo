@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carregando...</title>
+  <link rel="stylesheet" href="loading.css">
+  <style>
+    body {
+      background-color: #348894;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+
+    #loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .garfinho-circle {
+      width: 150px;
+      height: 150px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      animation: pulse 1.5s infinite;
+    }
+
+    .garfinho-img {
+      width: 90%;
+      height: auto;
+    }
+
+    #loading-message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading-container">
+    <div class="garfinho-circle">
+      <img src="/pages/img/Handdrawn Circle Logo.png" alt="Garfinho Mascote" class="garfinho-img" />
+    </div>
+    <div id="loading-message">Carregando...</div>
+  </div>
+
+  <script>
+    const name = sessionStorage.getItem("displayName") || "usuário";
+    document.getElementById("loading-message").innerText =
+      `✅ Bem-vindo, ${name}! Seu Login/Cadastro foi realizado com sucesso!`;
+
+    setTimeout(() => {
+      window.location.href = "user.html";
+    }, 2000);
+  </script>
+</body>
+
+</html>
+

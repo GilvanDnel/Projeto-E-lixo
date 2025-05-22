@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "preservar-meio-ambiente",
+    "prod": "preservar-meio-ambiente",
+    ".": "preservar-meio-ambiente"
+  },
+  "targets": {},
+  "etags": {}
+}
