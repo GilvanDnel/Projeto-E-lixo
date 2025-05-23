@@ -40,7 +40,8 @@ function login() {
             const displayName = user.displayName || "usuário";
 
             sessionStorage.setItem("displayName", displayName);
-            window.location.href = "/pages/home/showloading.html";
+            window.location.href = "../home/showloading.html";
+
         })
         .catch(error => {
             alert(getErrorMessage(error));
